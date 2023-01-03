@@ -34,7 +34,7 @@ function About() {
             <main>
                 <Banner image={aboutBannerImg} alt="Paysage montagneux et arboré" text={null}/>
                 <section className="collapse--section">{collapseData.map(collapse => (
-                    <Collapse key={collapse.id} title={collapse.title} text={collapse.text}/>
+                    <Collapse key={collapse.id} title={collapse.title} text={collapse.text} defaultOpen={false}/>
                 ))}</section>
             </main>
         </>

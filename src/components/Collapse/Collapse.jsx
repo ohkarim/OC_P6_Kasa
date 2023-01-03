@@ -2,7 +2,7 @@ import { useState } from "react";
 import arrow from "../../assets/images/collapse_dropdown_arrow.png"
 
 function Collapse(props) {
-    const [isExpanded, setIsExpanded] = useState(false); // initialized as "false" in order to be closed by default
+    const [isExpanded, setIsExpanded] = useState(props.defaultOpen); // initialized with props, depending on true/flase value of defaultOpen
 
     return ( 
         <div key={props.id} className="collapse--container">
