@@ -177,6 +177,62 @@ main {
   z-index: 1;
 }
 
+/*  +++++++ COLLAPSE SECTION +++++++ */
+
+.collapse--section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  gap: 33px;
+  flex: 1;
+}
+
+.collapse--container {
+  width: 1023px;
+  /* height: 184px; */
+  display: flex;
+  flex-direction: column;
+}
+
+.collapse--header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px 0 18px;
+  background-color: #FF6060;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.collapse--title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 34px;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  margin: 5.75px 0 7.25px 0;
+}
+
+.collapse--arrow {
+  height: 29px;
+  width: 29px;
+}
+
+.collapse--text {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+  color: #FF6060;
+  background: #F7F7F7;
+  border-radius: 5px;
+  padding: 27px 27px 19px 18px;
+  margin-top: -10px;
+  z-index: 0;
+}
+
 /*  +++++++ FOOTER SECTION +++++++ */
 
 .footer {

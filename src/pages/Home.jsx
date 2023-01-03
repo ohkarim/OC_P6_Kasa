@@ -2,11 +2,13 @@
 import Banner from "../components/Banner/Banner";
 import Gallery from "../components/Gallery/Gallery";
 
+import homeBannerImg from "../assets/images/banner_home_img.png"
+
 function Home() {
   return (
     <>
       <main>
-        <Banner />
+        <Banner image={homeBannerImg} alt="Paysage montagneux et arboré" text="Chez vous, partout et ailleurs"/>
         <Gallery />
       </main>
     </>

@@ -1,4 +1,4 @@
-import kasaLogo from "../../kasa-logo.png";
+import kasaLogo from "../../assets/images/kasa-logo.png";
 import NavBar from "../NavBar/NavBar";
 
 export default function Header() {
