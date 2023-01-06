@@ -1,4 +1,6 @@
 import { useState } from "react";
+import "./collapse.css";
+
 import arrow from "../../assets/images/collapse_dropdown_arrow.png"
 
 function Collapse(props) {
@@ -24,3 +26,4 @@ function Collapse(props) {
 }
 
 export default Collapse;
+

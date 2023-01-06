@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
+import "./gallery.css";
+
 import RentalCard from "../RentalCard/RentalCard"
 
 export default function Gallery() {

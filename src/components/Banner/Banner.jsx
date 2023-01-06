@@ -1,6 +1,4 @@
-
-
-// TODO: this component would probably be reused, now hardcoded with this specific Home Banner image
+import "./banner.css";
 
 export default function Banner(props) {
     return ( 

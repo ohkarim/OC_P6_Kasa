@@ -1,0 +1,40 @@
+/*  +++++++ BANNER SECTION +++++++ */
+
+.banner--container {
+    position: relative;
+    height: 223px;
+    width: 1240px;
+    margin-top: 65px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  
+  .banner--img {
+    height: 223px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+    filter: brightness(60%);
+  }
+  
+  .banner--text--container {
+    height: 223px;
+    width: 1240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+  }
+  
+  .banner--text--content {
+    position: absolute;
+    top: 29px;
+    left: 268px;
+    color: white;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 68px;
+  }

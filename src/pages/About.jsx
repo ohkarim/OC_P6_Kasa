@@ -3,9 +3,6 @@ import Collapse from "../components/Collapse/Collapse";
 
 import aboutBannerImg from "../assets/images/banner_about_img.png"
 
-// TODO: for Data of each Collapse component, should I use map with a JSON file that includes each data for each element or hardcode it ?
-// Best with JSON, or with array in const 
-
 function About() {
     const collapseData = [
         {

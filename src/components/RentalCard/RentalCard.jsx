@@ -1,3 +1,5 @@
+import "./rental-card.css";
+
 export default function RentalCard(props) {
     return(
         <article className="rental--card">

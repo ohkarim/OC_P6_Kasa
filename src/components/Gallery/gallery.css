@@ -1,0 +1,14 @@
+/*  +++++++ GALLERY SECTION +++++++ */
+
+.gallery {
+    max-width: 1240px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 55px;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #F7F7F7;
+    border-radius: 25px;
+    margin: 45px 0;
+    padding: 56px 50px;
+  }
