@@ -24,11 +24,24 @@ body {
 
 main {
   margin: 0 auto;
-  /* max-width: 1240px; */
+  max-width: 1440px;
   width: 100%;
   display: flex;
   flex-direction: column;
   flex: 1; /* make the main content fill the remaining space */
   /* overflow-y: auto; add scrollbars if the content overflows */
   align-items: center;
+  padding: 0 100px;
+}
+
+/* @media screen and (max-width: 640px) {
+  main {
+    padding: 0 20px;
+  }
+} */
+
+@media screen and (max-width: 1040px) {
+  main {
+    padding: 0 20px;
+  }
 }

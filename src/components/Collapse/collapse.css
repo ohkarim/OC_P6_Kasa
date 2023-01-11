@@ -1,57 +1,85 @@
 /*  +++++++ COLLAPSE SECTION +++++++ */
 
 .collapse--section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 30px 30px 200px 30px;
-    gap: 33px;
-    flex: 1;
-    height: 100%;
-  }
-  
-  .collapse--container {
-    width: 1023px;
-    /* height: 184px; */
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 30px 30px 200px 30px;
+  gap: 33px;
+  flex: 1;
+  height: 100%;
+  max-width: 1023px;
+  width: 100%;
+}
+
+.collapse--container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.collapse--header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px 0 18px;
+  background-color: #FF6060;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.collapse--title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 34px;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  margin: 5.75px 0 7.25px 0;
+}
+
+.collapse--arrow {
+  height: 29px;
+  width: 29px;
+}
+
+.collapse--text {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+  color: #FF6060;
+  background: #F7F7F7;
+  border-radius: 5px;
+  padding: 27px 27px 19px 18px;
+  margin-top: -10px;
+  z-index: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .collapse--section {
+    padding: 20px 0;
+    gap: 20px;
   }
   
   .collapse--header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 30px 0 18px;
-    background-color: #FF6060;
-    border-radius: 5px;
-    z-index: 1;
+    padding: 0 6px 0 0;
   }
-  
+
   .collapse--title {
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 34px;
-    display: flex;
-    align-items: center;
-    color: #FFFFFF;
-    margin: 5.75px 0 7.25px 0;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 5.5px 0 5.5px 11.5px;
   }
   
   .collapse--arrow {
-    height: 29px;
-    width: 29px;
+    height: 18px;
+    width: 18px;
   }
-  
+
   .collapse--text {
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 34px;
-    color: #FF6060;
-    background: #F7F7F7;
-    border-radius: 5px;
-    padding: 27px 27px 19px 18px;
-    margin-top: -10px;
-    z-index: 0;
+    font-size: 12px;
+    line-height: 17px;
   }
+}

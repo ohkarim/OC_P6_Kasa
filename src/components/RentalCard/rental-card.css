@@ -1,41 +1,48 @@
 /*  +++++++ RENTAL CARD SECTION +++++++ */
 
 .rental--card {
-    position: relative;
-    height: 340px;
-    width: 340px;
-    border-radius: 10px;
-    cursor: pointer;
+  position: relative;
+  height: 340px;
+  width: 340px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.rental--card::after {
+  content: "";
+  position: absolute;
+  height: 340px;
+  width: 340px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+.rental--card--img {
+  /* display: none; */
+  position: absolute;
+  height: 340px;
+  width: 340px;
+  object-fit: cover;
+  border-radius: 10px;
+  z-index: 0;
+}
+
+.rental--card--title {
+  position: absolute;
+  left: 5.88%;
+  right: 5.88%;
+  /* top: 78.82%; */
+  bottom: 0; 
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  color: white;
+  z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .rental--card, .rental--card::after, .rental--card--img {
+    height: 255px;
+    width: 335px;
   }
-  
-  .rental--card::after {
-    content: "";
-    position: absolute;
-    height: 340px;
-    width: 340px;
-    border-radius: 10px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
-  }
-  
-  .rental--card--img {
-    /* display: none; */
-    position: absolute;
-    height: 340px;
-    width: 340px;
-    object-fit: cover;
-    border-radius: 10px;
-    z-index: 0;
-  }
-  
-  .rental--card--title {
-    position: absolute;
-    left: 5.88%;
-    right: 5.88%;
-    /* top: 78.82%; */
-    bottom: 0; 
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 26px;
-    color: white;
-    z-index: 1;
-  }
+}

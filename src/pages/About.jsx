@@ -1,7 +1,8 @@
 import Banner from "../components/Banner/Banner";
 import Collapse from "../components/Collapse/Collapse";
 
-import aboutBannerImg from "../assets/images/banner_about_img.png"
+import aboutBannerImg from "../assets/images/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg";
+
 
 function About() {
     const collapseData = [
@@ -25,7 +26,8 @@ function About() {
             title: "Sécurité",
             text: "La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes."
         }  
-    ]
+    ];
+
     return (
         <>
             <main>
