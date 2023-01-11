@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 
 import kasaLogo from "../../assets/images/kasa-logo.png";
-import "./navbar.css";
+import navBarStyles from "./Navbar.module.css";
 
 export default function NavBar() {
     // Style to apply to active NavLinks
@@ -10,13 +10,13 @@ export default function NavBar() {
       };
 
     return (
-        <nav className="nav-bar">
-            <img src={kasaLogo} alt="Logo Kasa" className="nav-bar--logo" />
+        <nav className={navBarStyles["nav-bar"]}>
+            <img src={kasaLogo} alt="Logo Kasa" className={navBarStyles["nav-bar--logo"]} />
             <ul>
-                <li className="nav-bar--title">
+                <li className={navBarStyles["nav-bar--title"]}>
                     <NavLink 
                         to="/" 
-                        className="nav-bar--link"
+                        className={navBarStyles["nav-bar--link"]}
                         style={({ isActive }) =>
                             isActive ? activeStyle : undefined
                         }
@@ -24,10 +24,10 @@ export default function NavBar() {
                         Accueil
                     </NavLink>
                 </li>
-                <li className="nav-bar--title">
+                <li className={navBarStyles["nav-bar--title"]}>
                     <NavLink 
                         to="/about" 
-                        className="nav-bar--link"
+                        className={navBarStyles["nav-bar--link"]}
                         style={({ isActive }) =>
                             isActive ? activeStyle : undefined
                         }

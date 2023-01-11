@@ -1,10 +1,10 @@
-import "./header.css";
+import headerStyles from "./Header.module.css";
 
 import NavBar from "../NavBar/NavBar";
 
 export default function Header() {
     return (
-        <header className="header">
+        <header className={headerStyles["header"]}>
             <NavBar />
         </header>
     );

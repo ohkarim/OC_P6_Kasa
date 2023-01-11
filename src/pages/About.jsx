@@ -1,6 +1,8 @@
 import Banner from "../components/Banner/Banner";
 import Collapse from "../components/Collapse/Collapse";
 
+import collapseStyles from "../components/Collapse/Collapse.module.css";
+
 import aboutBannerImg from "../assets/images/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg";
 
 
@@ -32,7 +34,7 @@ function About() {
         <>
             <main>
                 <Banner image={aboutBannerImg} alt="Paysage montagneux et arboré" text={null}/>
-                <section className="collapse--section">{collapseData.map(collapse => (
+                <section className={collapseStyles["collapse--section"]}>{collapseData.map(collapse => (
                     <Collapse key={collapse.id} title={collapse.title} text={collapse.text} defaultOpen={false}/>
                 ))}</section>
             </main>
