@@ -8,6 +8,6 @@ function NoMatch() {
             </main>
         </> 
     );
-}
+};
 
 export default NoMatch;

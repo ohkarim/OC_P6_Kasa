@@ -4,15 +4,15 @@ import Gallery from "../components/Gallery/Gallery";
 
 import homeBannerImg from "../assets/images/eric-muhr-P_XxsdVgtpQ-unsplash.jpg";
 
-function Home() {
+function Home({ rentals }) {
   return (
     <>
       <main>
-        <Banner image={homeBannerImg} alt="Paysage montagneux et arboré" text="Chez vous, partout et ailleurs"/>
-        <Gallery />
+        <Banner image={ homeBannerImg } text="Chez vous, partout et ailleurs"/>
+        <Gallery rentals={ rentals } />
       </main>
     </>
   );
-}
+};
 
 export default Home;

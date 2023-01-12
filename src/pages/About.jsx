@@ -33,14 +33,18 @@ function About() {
     return (
         <>
             <main>
-                <Banner image={aboutBannerImg} alt="Paysage montagneux et arboré" text={null}/>
-                <section className={collapseStyles["collapse--section"]}>{collapseData.map(collapse => (
-                    <Collapse key={collapse.id} title={collapse.title} text={collapse.text} defaultOpen={false}/>
-                ))}</section>
+                <Banner image={aboutBannerImg} text={null}/>
+                <section className={collapseStyles["collapse--section"]}>
+                    {collapseData.map(collapse => (
+                                <Collapse key={collapse.id} title={collapse.title} text={collapse.text} defaultOpen={false}/>
+                            )
+                        )
+                    }
+                </section>
             </main>
         </>
-    )
-}
+    );
+};
 
 
 export default About

@@ -10,6 +10,6 @@ function Error() {
             <Link to="/" className={errorStyles["error--home-link"]}>Retourner sur la page d’accueil</Link>
         </section>
     );
-}
+};
 
 export default Error;

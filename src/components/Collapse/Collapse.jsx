@@ -3,15 +3,15 @@ import collapseStyles from "./Collapse.module.css";
 
 import arrow from "../../assets/images/collapse_dropdown_arrow.png"
 
-function Collapse(props) {
-    const [isExpanded, setIsExpanded] = useState(props.defaultOpen); // initialized with props, depending on true/flase value of defaultOpen
+function Collapse({ key, title, text, defaultOpen}) {
+    const [isExpanded, setIsExpanded] = useState( defaultOpen ); // initialized with props, depending on true/flase value of defaultOpen
 
     return ( 
-        <div key={props.id} className={collapseStyles["collapse--container"]}>
+        <div key={ key } className={collapseStyles["collapse--container"]}>
             <div className={collapseStyles["collapse--header"]} onClick={() => setIsExpanded(!isExpanded)}>
-                <h3 className={collapseStyles["collapse--title"]}>{props.title}</h3>
+                <h3 className={collapseStyles["collapse--title"]}>{ title }</h3>
                 <img 
-                    src={arrow} 
+                    src={ arrow } 
                     alt="Arrow" 
                     className={collapseStyles["collapse--arrow"]}
                     style={{
@@ -20,10 +20,10 @@ function Collapse(props) {
                     }}
                 />
             </div>
-            {isExpanded && (<div className={collapseStyles["collapse--text"]}>{props.text}</div>)}
+            {isExpanded && (<div className={collapseStyles["collapse--text"]}>{ text }</div>)}
         </div>
      );
-}
+};
 
 export default Collapse;
 
