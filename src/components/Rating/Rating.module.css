@@ -1,0 +1,23 @@
+.rating--container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.rating--star--filled {
+    height: 30px;
+    width: 30px;
+    filter: invert(83%) sepia(51%) saturate(6953%) hue-rotate(318deg) brightness(94%) contrast(115%);
+}
+
+.rating--star--empty {
+    height: 30px;
+    width: 30px;
+    filter: invert(87%) sepia(0%) saturate(502%) hue-rotate(178deg) brightness(110%) contrast(86%);
+}
+
+.rating--star--empty:hover {
+    filter: invert(83%) sepia(51%) saturate(6953%) hue-rotate(318deg) brightness(94%) contrast(115%);
+}

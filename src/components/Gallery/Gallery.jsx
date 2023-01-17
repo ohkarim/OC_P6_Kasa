@@ -3,16 +3,17 @@ import galleryStyles from "./Gallery.module.css";
 import RentalCard from "../RentalCard/RentalCard"
 
 export default function Gallery({ rentals }) {
-    return ( 
+    return (
         <section className={galleryStyles["gallery"]}>
             {rentals.map(rental => (
-                <RentalCard 
+                <RentalCard
                     key={rental.id}
+                    id={rental.id}
                     title={rental.title}
                     cover={rental.cover}
                     alt={rental.title}
                 />
             ))}
         </section>
-     );
+    );
 };

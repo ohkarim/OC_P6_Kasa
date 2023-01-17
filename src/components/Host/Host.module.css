@@ -1,0 +1,25 @@
+.host--container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.host--name {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    display: flex;
+    align-items: flex-end;
+    text-align: right;
+    color: #FF6060;
+    max-width: 100px;
+    width: 100%;
+    margin-top: 0;
+}
+
+.host--picture {
+    height: 64px;
+    width: 64px;
+    border-radius: 50%;
+}
