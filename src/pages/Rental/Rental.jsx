@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 import rentalStyles from "./Rental.module.css";
 
@@ -8,7 +8,6 @@ import Tags from "../../components/Tags/Tags";
 import Host from "../../components/Host/Host";
 import Rating from "../../components/Rating/Rating";
 import Collapse from "../../components/Collapse/Collapse";
-import NoMatch from "../NoMatch";
 
 
 function Rental({ rentals }) {
@@ -16,15 +15,27 @@ function Rental({ rentals }) {
     let { id } = useParams();
 
     // Store rental data in state
-    const [rental, setRental] = useState();
+    const [rental, setRental] = useState(null);
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         // Finding data from props corresponding to right id
         const rentalFound = rentals.find(rental => rental.id === id);
-        setRental(rentalFound);
-    }, [rentals, id])
 
-    return rental ? (
+        // Check if id isn't found, redirect to NoMatch, if not, set state with data corresponding to right id
+        if (!rentalFound) {
+            navigate('/NoMatch');
+        } else {
+            setRental(rentalFound);
+        }
+    }, [rentals, id, navigate])
+
+    if (!rental) {
+        return null;
+    }
+
+    return (
         <>
             <main>
                 <Carousel images={rental.pictures} />
@@ -49,7 +60,7 @@ function Rental({ rentals }) {
                 </div>
             </main>
         </>
-    ) : (<NoMatch />);
+    );
 }
 
 export default Rental;
