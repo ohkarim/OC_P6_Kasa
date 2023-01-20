@@ -90,7 +90,7 @@
   }
 }
 
-@media screen and ((min-width: 492px) and (max-width: 641px)) {
+@media screen and ((min-width: 492px) and (max-width: 640px)) {
   .banner--container {
     margin-top: 20px;
     height: 111px;

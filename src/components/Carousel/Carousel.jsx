@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 import carouselStyles from "./Carousel.module.css";
-
-// TODO: styling for carousel, + importing arrows icons for prev/next
+import arrowLeft from "../../assets/images/arrow-left.png";
+import arrowRight from "../../assets/images/arrow-right.png";
 
 function Carousel({ images }) {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -17,13 +17,9 @@ function Carousel({ images }) {
 
     return (
         <section className={carouselStyles["carousel--container"]} style={{ backgroundImage: `url(${images[currentIndex]})` }}>
-            {currentIndex !== 0 && <button onClick={handlePreviousClick}>
-                Précédent
-            </button>}
-            {currentIndex !== images.length - 1 && <button onClick={handleNextClick}>
-                Suivant
-            </button>}
-            <p>
+            {currentIndex !== 0 && <img src={arrowLeft} alt="Bouton précédent" onClick={handlePreviousClick} className={carouselStyles["carousel--button--prev"]} />}
+            {currentIndex !== images.length - 1 && <img src={arrowRight} alt="Bouton suivant" onClick={handleNextClick} className={carouselStyles["carousel--button--next"]} />}
+            <p className={carouselStyles["carousel--counter"]}>
                 {currentIndex + 1}/{images.length}
             </p>
         </section>

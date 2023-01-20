@@ -21,3 +21,22 @@
 .rating--star--empty:hover {
     filter: invert(83%) sepia(51%) saturate(6953%) hue-rotate(318deg) brightness(94%) contrast(115%);
 }
+
+@media screen and (max-width: 768px) {
+    .rating--container {
+        gap: 2px;
+        margin: 0;
+    }
+
+    .rating--star--filled,
+    .rating--star--empty {
+        height: 18px;
+        width: 18px;
+    }
+}
+
+@media screen and ((min-width: 769px) and (max-width: 1040px)) {
+    .rating--container {
+        margin: 0;
+    }
+}

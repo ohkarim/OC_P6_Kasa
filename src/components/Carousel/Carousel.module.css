@@ -14,4 +14,70 @@
     background-color: rgba(247, 247, 247, 1);
     background-blend-mode: multiply;
     object-fit: cover;
+    background-size: cover;
+}
+
+.carousel--button--next,
+.carousel--button--prev {
+    position: absolute;
+    height: 80px;
+    width: 47px;
+    opacity: 0.87;
+}
+
+.carousel--button--prev {
+    right: 94%;
+    top: 40%;
+}
+
+.carousel--button--next {
+    left: 94%;
+    top: 40%;
+}
+
+.carousel--counter {
+    position: absolute;
+    left: 48.95%;
+    right: 49.11%;
+    top: 86.19%;
+    bottom: 6.01%;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+
+@media screen and ((max-width: 768px)) {
+    .carousel--container {
+        margin-top: 27px;
+        height: 255px;
+        min-width: 335px;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+
+    .carousel--button--next,
+    .carousel--button--prev {
+        height: 20px;
+        width: 12px;
+        top: 50%;
+    }
+
+    .carousel--counter {
+        display: none;
+    }
+}
+
+@media screen and ((min-width: 769px) and (max-width: 1040px)) {
+
+    .carousel--button--next,
+    .carousel--button--prev {
+        height: 60px;
+        width: 35px;
+        top: 45%;
+    }
 }

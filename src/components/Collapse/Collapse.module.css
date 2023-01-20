@@ -96,5 +96,12 @@
   .collapse--text {
     font-size: 12px;
     line-height: 17px;
+    padding: 20px 12px 12px 12px;
+  }
+
+  .collapse--list--container {
+    font-size: 12px;
+    line-height: 17px;
+    padding: 20px 12px 12px 12px;
   }
 }

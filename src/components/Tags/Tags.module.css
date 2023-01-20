@@ -4,6 +4,7 @@
     display: flex;
     margin: 20px 0;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 .tag--item {
@@ -20,4 +21,18 @@
     align-items: center;
     padding: 0 10px;
     cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .tags--container {
+        margin: 10px 0;
+    }
+
+    .tag--item {
+        font-size: 10px;
+        line-height: 14px;
+        min-width: 84px;
+        height: 18px;
+        border-radius: 5px;
+    }
 }

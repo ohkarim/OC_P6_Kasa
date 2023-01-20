@@ -23,3 +23,27 @@
     width: 64px;
     border-radius: 50%;
 }
+
+@media screen and ((max-width: 768px)) {
+    .host--name {
+        font-size: 12px;
+        line-height: 17px;
+        max-width: 50px;
+        margin-bottom: 0;
+    }
+
+    .host--picture {
+        height: 32px;
+        width: 32px;
+    }
+}
+
+@media screen and ((min-width: 769px) and (max-width: 1040px)) {
+    .host--container {
+        align-items: center;
+    }
+
+    .host--name {
+        margin-bottom: 0;
+    }
+}
