@@ -15,6 +15,8 @@ function Carousel({ images }) {
         setCurrentIndex(currentIndex + 1);
     };
 
+    // TODO: click on first prev on 1st image = last img, vice versa
+
     return (
         <section className={carouselStyles["carousel--container"]} style={{ backgroundImage: `url(${images[currentIndex]})` }}>
             {currentIndex !== 0 && <img src={arrowLeft} alt="Bouton précédent" onClick={handlePreviousClick} className={carouselStyles["carousel--button--prev"]} />}

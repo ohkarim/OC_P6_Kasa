@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import useFetch from "../../hooks/UseFetch";
 
 import rentalStyles from "./Rental.module.css";
 
@@ -10,28 +11,36 @@ import Rating from "../../components/Rating/Rating";
 import Collapse from "../../components/Collapse/Collapse";
 
 
-function Rental({ rentals }) {
+function Rental() {
     // Get the product id param from the URL.
     let { id } = useParams();
+
+    const [rentals, loading] = useFetch('../../../db/logements.json');
+    console.log(rentals);
 
     // Store rental data in state
     const [rental, setRental] = useState(null);
 
+    console.log(rental);
+
     const navigate = useNavigate();
 
     useEffect(() => {
-        // Finding data from props corresponding to right id
-        const rentalFound = rentals.find(rental => rental.id === id);
+        if (!loading && rentals.length > 0) {
+            // Finding data from props corresponding to right id
+            const rentalFound = rentals.find(rental => rental.id === id);
+            console.log(rentalFound);
 
-        // Check if id isn't found, redirect to NoMatch, if not, set state with data corresponding to right id
-        if (!rentalFound) {
-            navigate('/NoMatch');
-        } else {
-            setRental(rentalFound);
+            // Check if id isn't found, redirect to NoMatch, if not, set state with data corresponding to right id
+            if (!rentalFound) {
+                navigate('/NoMatch');
+            } else {
+                setRental(rentalFound);
+            }
         }
-    }, [rentals, id, navigate])
+    }, [loading, rentals, id, navigate])
 
-    if (!rental) {
+    if (loading || !rental) {
         return null;
     }
 
