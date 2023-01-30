@@ -4,7 +4,7 @@ import collapseStyles from "./Collapse.module.css";
 import arrow from "../../assets/images/collapse_dropdown_arrow.png"
 
 function Collapse({ id, title, text, defaultOpen, isList, listItems }) {
-    const [isExpanded, setIsExpanded] = useState(defaultOpen); // initialized with props, depending on true/flase value of defaultOpen
+    const [isExpanded, setIsExpanded] = useState(defaultOpen); // initialized with props, depending on true/false value of defaultOpen
 
     return (
         <div key={id} className={collapseStyles["collapse--container"]}>
