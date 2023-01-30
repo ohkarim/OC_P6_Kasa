@@ -8,22 +8,20 @@ function Carousel({ images }) {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const handlePreviousClick = () => {
-        setCurrentIndex(currentIndex - 1);
+        setCurrentIndex((currentIndex - 1 + images.length) % images.length);
     };
 
     const handleNextClick = () => {
-        setCurrentIndex(currentIndex + 1);
+        setCurrentIndex((currentIndex + 1) % images.length);
     };
-
-    // TODO: click on first prev on 1st image = last img, vice versa
 
     return (
         <section className={carouselStyles["carousel--container"]} style={{ backgroundImage: `url(${images[currentIndex]})` }}>
-            {currentIndex !== 0 && <img src={arrowLeft} alt="Bouton précédent" onClick={handlePreviousClick} className={carouselStyles["carousel--button--prev"]} />}
-            {currentIndex !== images.length - 1 && <img src={arrowRight} alt="Bouton suivant" onClick={handleNextClick} className={carouselStyles["carousel--button--next"]} />}
-            <p className={carouselStyles["carousel--counter"]}>
+            {images.length > 1 && <img src={arrowLeft} alt="Bouton précédent" onClick={handlePreviousClick} className={carouselStyles["carousel--button--prev"]} />}
+            {images.length > 1 && <img src={arrowRight} alt="Bouton suivant" onClick={handleNextClick} className={carouselStyles["carousel--button--next"]} />}
+            {images.length > 1 && <p className={carouselStyles["carousel--counter"]}>
                 {currentIndex + 1}/{images.length}
-            </p>
+            </p>}
         </section>
     );
 };
