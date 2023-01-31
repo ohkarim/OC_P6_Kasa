@@ -35,12 +35,11 @@
 
 .hosting--collapse--container {
     display: flex;
-    align-items: flex-start;
+    align-items: stretch;
     justify-content: space-between;
     gap: 76px;
     margin-bottom: 20px;
     width: 100%;
-    height: 100%;
 }
 
 @media screen and ((max-width: 768px)) {
