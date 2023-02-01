@@ -2,6 +2,11 @@ import footerStyles from "./Footer.module.css";
 
 import kasaLogoWhite from "../../assets/images/kasa-logo-white.png";
 
+/** 
+ * @function Footer - The functional component that renders the footer.
+ * @return {JSX.Element} The rendered component.
+*/
+
 export default function Footer () {
     return (
         <footer className={footerStyles["footer"]}>

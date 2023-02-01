@@ -10,6 +10,15 @@ import Host from "../../components/Host/Host";
 import Rating from "../../components/Rating/Rating";
 import Collapse from "../../components/Collapse/Collapse";
 
+/** 
+ * @function Rental The functional component that renders the rental page.
+ * @constant {string} id - The id of the rental.
+ * @constant {array} rentals - The array of rental objects.
+ * @constant {object} rental - The object of the rental corresponding to the id.
+ * @constant {boolean} loading - A flag to indicate whether the data is being fetched or not.
+ * @constant {function} navigate - A function to navigate to a different page.
+ * @useEffect - A hook that runs when the component is mounted.
+*/
 
 function Rental() {
     // Get the product id param from the URL.

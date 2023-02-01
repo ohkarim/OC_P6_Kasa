@@ -3,8 +3,14 @@ import { NavLink } from "react-router-dom";
 import kasaLogo from "../../assets/images/kasa-logo.png";
 import navBarStyles from "./Navbar.module.css";
 
+/** 
+ * @function NavBar - The functional component that renders the navigation bar.
+ * @constant {object} activeStyle - The style of the active link.
+ * @constant {string} activeStyle.textDecoration - The text decoration of the active link.
+ * @return {JSX.Element} The rendered component.
+*/
+
 export default function NavBar() {
-    // Style to apply to active NavLinks
     let activeStyle = {
         textDecoration: "underline",
       };

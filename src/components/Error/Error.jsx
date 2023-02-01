@@ -2,6 +2,11 @@ import { Link } from "react-router-dom";
 
 import errorStyles from "./Error.module.css";
 
+/**
+ * @function Error - The functional component that renders the error page.
+ * @return {JSX.Element} The rendered component.
+ */
+
 function Error() {
     return ( 
         <section className={errorStyles["error--container"]}>

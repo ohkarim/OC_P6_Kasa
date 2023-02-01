@@ -4,6 +4,17 @@ import carouselStyles from "./Carousel.module.css";
 import arrowLeft from "../../assets/images/arrow-left.png";
 import arrowRight from "../../assets/images/arrow-right.png";
 
+/** 
+ * @function Carousel - The functional component that renders the carousel.
+ * @param {object} props - The properties of the component.
+ * @param {array} props.images - The array of images of the carousel.
+ * @constant {number} currentIndex - The index of the current image.
+ * @constant {function} setCurrentIndex - The function that sets the current index.
+ * @constant {function} handlePreviousClick - The function that handles the previous click.
+ * @constant {function} handleNextClick - The function that handles the next click.
+ * @return {JSX.Element} The rendered component.
+*/
+
 function Carousel({ images }) {
     const [currentIndex, setCurrentIndex] = useState(0);
 

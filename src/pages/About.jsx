@@ -5,6 +5,11 @@ import collapseStyles from "../components/Collapse/Collapse.module.css";
 
 import aboutBannerImg from "../assets/images/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg";
 
+/**
+ * @function About - The About component displays the main contents of the about page.
+ * @constant {array} collapseData - The array of objects that contains the data to be displayed in the Collapse component.
+ * @return {JSX.Element} The rendered component.
+ */
 
 function About() {
     const collapseData = [

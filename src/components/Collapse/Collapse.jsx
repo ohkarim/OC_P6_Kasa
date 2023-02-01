@@ -3,6 +3,20 @@ import collapseStyles from "./Collapse.module.css";
 
 import arrow from "../../assets/images/collapse_dropdown_arrow.png"
 
+/** 
+ * @function Collapse - The functional component that renders the collapse.
+ * @param {object} props - The properties of the component.
+ * @param {string} props.id - The id of the collapse.
+ * @param {string} props.title - The title of the collapse.
+ * @param {string} props.text - The text of the collapse.
+ * @param {boolean} props.defaultOpen - The default state of the collapse.
+ * @param {boolean} props.isList - The boolean value of the collapse.
+ * @param {Array} props.listItems - The array of list items.
+ * @constant {boolean} isExpanded - The state of the collapse.
+ * @constant {function} setIsExpanded - The function that sets the state of the collapse.
+ * @return {JSX.Element} The rendered component.
+*/
+
 function Collapse({ id, title, text, defaultOpen, isList, listItems }) {
     const [isExpanded, setIsExpanded] = useState(defaultOpen); // initialized with props, depending on true/false value of defaultOpen
 

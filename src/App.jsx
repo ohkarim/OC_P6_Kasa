@@ -16,6 +16,7 @@ import NoMatch from "./pages/NoMatch";
  * Renders the header, footer and routes components
  * using the Route component from react-router-dom
  * @function App
+ * @returns {JSX.Element} The rendered component.
  */
 
 function App() {
